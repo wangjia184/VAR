@@ -4,7 +4,17 @@ RUN mkdir /app
 #ADD data.tar /
 #COPY vgg16-397923af.pth /root/.cache/torch/hub/checkpoints/vgg16-397923af.pth
 
-RUN pip3 install -i  https://pypi.tuna.tsinghua.edu.cn/simple tensorboard==2.19.0 matplotlib==3.10.0 torchinfo==1.8.0 einops==0.8.1 huggingface-hub==0.29.1 pytz==2025.1 transformers==4.49.0 typed-argument-parser==1.10.1 pillow==11.1.0
+RUN pip3 install \
+    tensorboard==2.19.0 \
+    matplotlib==3.10.0 \
+    torchinfo==1.8.0 \
+    einops==0.8.1 \
+    huggingface-hub==0.29.1 \
+    pytz==2025.1 \
+    transformers==4.49.0 \
+    typed-argument-parser==1.10.1 \
+    pillow==11.1.0 \
+    xformers==0.0.29.post3
 
 EXPOSE 6006
 
